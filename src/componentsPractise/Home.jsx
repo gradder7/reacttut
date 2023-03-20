@@ -18,10 +18,11 @@ export default function Home() {
           className="link"
           style={{ textDecoration: "none" }}
         >
-          <p className="linkinline">React form</p>
+          React Form
         </Link>
+        <br />
         <Link to="/Counter" className="link" style={{ textDecoration: "none" }}>
-          <p className="linkinline">Counter App</p>
+          Counter App
         </Link>
       </div>
     </div>
