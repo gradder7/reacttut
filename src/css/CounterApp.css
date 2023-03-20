@@ -1,0 +1,34 @@
+.counterDiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 300%;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: -15%;
+}
+
+.count {
+  font-size: 120%;
+  position: relative;
+  top: 10vh;
+}
+.buttons button {
+  font-size: 60%;
+  position: relative;
+  top: 20vh;
+  margin-left: 5px;
+  border-radius: 10px;
+}
+
+.btn1 {
+  background-color: green;
+}
+.btn2 {
+  background-color: red;
+}
+.btn3 {
+  background-color: yellow;
+}

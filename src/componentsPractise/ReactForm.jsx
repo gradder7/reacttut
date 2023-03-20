@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "../App.css";
+import "../css/ReactForm.css";
 
 // problem statement:
 // create a react form
@@ -94,7 +94,7 @@ function ReactForm() {
         {/* check is data already there than show error */}
         {isPresntData && (
           <div className="popUp">
-            <p>Data already present!</p>{" "}
+            <p className="error">Data already present!</p>{" "}
           </div>
         )}
         <form onSubmit={handleSubmit}>
@@ -108,7 +108,7 @@ function ReactForm() {
               onChange={handleChange}
             />
           </label>
-          <p>{errors.name}</p>
+          <p className="error">{errors.name}</p>
 
           <label>
             Enter your Position:
@@ -119,7 +119,7 @@ function ReactForm() {
               onChange={handleChange}
             />
           </label>
-          <p>{errors.position}</p>
+          <p className="error">{errors.position}</p>
 
           <label>
             Enter your age:
@@ -130,7 +130,7 @@ function ReactForm() {
               onChange={handleChange}
             />
           </label>
-          <p>{errors.age}</p>
+          <p className="error">{errors.age}</p>
           <input type="submit" />
         </form>
         <div>
