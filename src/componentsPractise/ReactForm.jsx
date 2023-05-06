@@ -9,28 +9,27 @@ import "../css/ReactForm.css";
 // show pop up on sucessfull submission
 // show pop if data already present in array and not add that data.
 
-
 function ReactForm() {
-    // states
-    // manage input in object
+  // states
+  // manage input in object
   const [inputs, setInputs] = useState({});
-//   check is submitted or not
+  //   check is submitted or not
   const [submit, setsubmit] = useState(false);
-//   check is data we are entering aready in array or not
+  //   check is data we are entering aready in array or not
   const [isPresntData, setIsPresentData] = useState(false);
-//   set the error for validation
+  //   set the error for validation
   const [errors, setErrors] = useState({});
-//   satete to store the input in array
+  //   satete to store the input in array
   const [details, setDetails] = useState([]);
 
-//   handle the input in inputfields
+  //   handle the input in inputfields
   const handleChange = (event) => {
     const name = event.target.name;
     const value = event.target.value;
     setInputs((values) => ({ ...values, [name]: value }));
   };
 
-//   handle submit
+  //   handle submit
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log(inputs);
@@ -42,7 +41,7 @@ function ReactForm() {
     setErrors(validate(inputs));
   };
 
-//   function to validate the data for handelling error
+  //   function to validate the data for handelling error
   const validate = (values) => {
     const errors = {};
     if (!values.name) {
@@ -56,12 +55,12 @@ function ReactForm() {
     } else if (parseInt(values.age) < 3) {
       errors.age = "age must be greater !";
     }
-  
+
     return errors;
   };
 
-// function to check is data already in array or not 
-// if yes than show error if not than add it
+  // function to check is data already in array or not
+  // if yes than show error if not than add it
   const checkDataArray = (values) => {
     for (let user of details) {
       // check data
@@ -89,7 +88,9 @@ function ReactForm() {
       <div className="container">
         {/* check is data submitted sucessfully than show sucessfully */}
         {Object.keys(errors).length === 0 && submit && (
-          <div className="popUp">Signed in sucessfully</div>
+          <div className="popUp">
+            <p>Signed in sucessfully</p>{" "}
+          </div>
         )}{" "}
         {/* check is data already there than show error */}
         {isPresntData && (
@@ -134,7 +135,7 @@ function ReactForm() {
           <input type="submit" />
         </form>
         <div>
-        {/* show the submitted data */}
+          {/* show the submitted data */}
           {Object.keys(errors).length === 0 && submit && (
             <div>
               <p>Details of Registerd User</p>

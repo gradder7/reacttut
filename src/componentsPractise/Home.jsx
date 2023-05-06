@@ -24,6 +24,30 @@ export default function Home() {
         <Link to="/Counter" className="link" style={{ textDecoration: "none" }}>
           <p className="linkinline">Counter App</p>
         </Link>
+        <br />
+        <Link
+          to="/counterXstate"
+          className="link"
+          style={{ textDecoration: "none" }}
+        >
+          <p className="linkinline">Counter App(Xstate)</p>
+        </Link>
+        <br />
+        <Link
+          to="/counterXstateNew"
+          className="link"
+          style={{ textDecoration: "none" }}
+        >
+          <p className="linkinline">Counter App(Xstate New)</p>
+        </Link>
+        <br />
+        <Link
+          to="/todoApp"
+          className="link"
+          style={{ textDecoration: "none" }}
+        >
+          <p className="linkinline">Todo(Xstate)</p>
+        </Link>
       </div>
     </div>
   );
