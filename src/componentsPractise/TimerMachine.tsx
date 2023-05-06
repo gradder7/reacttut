@@ -1,33 +1,13 @@
-import { useMachine } from "@xstate/react";
-import timerMachine from "../machines/timerMachine";
 import React from "react";
-export const  Timer = () => {
-  const [state, send] = useMachine(timerMachine);
 
-  const { elapsed, duration } = state.context;
+// Define the props type for the component (none are needed in this example)
+type Props = {};
 
+// Define the component as a function that returns a JSX element
+export default function TimerMachine(props: Props) {
   return (
-    <section>
-      <label>
-        <span>Elapsed time:</span>
-        <output>
-          {elapsed.toFixed(1)}s / {duration.toFixed(1)}s
-        </output>
-        <progress max={duration} value={elapsed} />
-      </label>
-      <label>
-        <span>Duration:</span>
-        <input
-          type="range"
-          min={0}
-          max={30}
-          value={duration}
-          onChange={(e) => {
-            send("DURATION.UPDATE", { value: +e.target.value });
-          }}
-        />
-      </label>
-      <button onClick={(_) => send("RESET")}>Reset</button>
-    </section>
+    <div>
+      <h1>Hello</h1>
+    </div>
   );
-};
+}

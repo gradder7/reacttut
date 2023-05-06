@@ -41,12 +41,24 @@ export default function Home() {
           <p className="linkinline">Counter App(Xstate New)</p>
         </Link>
         <br />
+        <Link to="/todoApp" className="link" style={{ textDecoration: "none" }}>
+          <p className="linkinline">Todo(Xstate)</p>
+        </Link>
+        <br />
         <Link
-          to="/todoApp"
+          to="/trafficLight"
           className="link"
           style={{ textDecoration: "none" }}
         >
-          <p className="linkinline">Todo(Xstate)</p>
+          <p className="linkinline">Traffic Light(Xstate)</p>
+        </Link>
+        <br />
+        <Link
+          to="/TrafficTypescript"
+          className="link"
+          style={{ textDecoration: "none" }}
+        >
+          <p className="linkinline">Traffic Light Typescript(Xstate)</p>
         </Link>
       </div>
     </div>
