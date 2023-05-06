@@ -21,15 +21,24 @@ export const trafficMachineTyprScript = createMachine<
       on: {
         NEXT: "red",
       },
+      after: {
+        3000: "red",
+      },
     },
     red: {
       on: {
         NEXT: "yellow",
       },
+      after: {
+        3000: "yellow",
+      },
     },
     yellow: {
       on: {
         NEXT: "green",
+      },
+      after: {
+        3000: "green",
       },
     },
   },
