@@ -60,6 +60,30 @@ export default function Home() {
         >
           <p className="linkinline">Traffic Light Typescript(Xstate)</p>
         </Link>
+        <br />
+        <Link
+          to="/badJoke"
+          className="link"
+          style={{ textDecoration: "none" }}
+        >
+          <p className="linkinline">Joke Search Typescript(Xstate)</p>
+        </Link>
+        <br />
+        <Link
+          to="/autocomplete"
+          className="link"
+          style={{ textDecoration: "none" }}
+        >
+          <p className="linkinline">AutoComplete search input</p>
+        </Link>
+        <br />
+        <Link
+          to="/randomUser"
+          className="link"
+          style={{ textDecoration: "none" }}
+        >
+          <p className="linkinline">Random User</p>
+        </Link>
       </div>
     </div>
   );

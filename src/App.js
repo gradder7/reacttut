@@ -8,6 +8,9 @@ import CounterAppXstateNew from "./componentsPractise/XstatePractise/Counter App
 import TodoApp from "./componentsPractise/XstatePractise/TodoApp";
 import TrafficLight from "./componentsPractise/XstatePractise/TrafficLight";
 import TrafficLightTypeScript from "./componentsPractise/TrafficLightTyprScript/TrafficLightTypeScript";
+import BadJokeSearch from "./componentsPractise/Bad Joke/BadJokeSearch";
+import AutocompleteInput from "./componentsPractise/AutoComplete";
+import RandomUser from "./componentsPractise/RandomUser";
 
 function App() {
   return (
@@ -21,7 +24,13 @@ function App() {
           <Route path="/counterXstateNew" element={<CounterAppXstateNew />} />
           <Route path="/todoApp" element={<TodoApp />} />
           <Route path="/trafficLight" element={<TrafficLight />} />
-          <Route path="/TrafficTypescript" element={<TrafficLightTypeScript />} />
+          <Route
+            path="/TrafficTypescript"
+            element={<TrafficLightTypeScript />}
+          />
+          <Route path="/badJoke" element={<BadJokeSearch />} />
+          {/* <Route path="/autocomplete" element={<AutocompleteInput />} /> */}
+          <Route path="/randomUser" element={<RandomUser />} />
         </Routes>
       </Router>
     </>
